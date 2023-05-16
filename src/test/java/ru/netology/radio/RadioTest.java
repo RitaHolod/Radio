@@ -8,10 +8,11 @@ public class RadioTest {
     Radio service = new Radio(10);
 
     @Test
-    public void testDefaultAmountStation(){
+    public void testDefaultAmountStation() {
 
         Assertions.assertEquals(10, service.getAmountStation());
     }
+
     @Test
 
     public void setCurrentStationTest() {

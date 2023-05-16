@@ -19,7 +19,7 @@ public class Radio {
 
     }
 
-    public int getAmountStation(){
+    public int getAmountStation() {
         return amountStation;
     }
 
