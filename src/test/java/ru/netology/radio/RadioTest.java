@@ -18,7 +18,7 @@ public class RadioTest {
     @Test
     public void setMaxStation() {
         Radio service = new Radio();
-        service.setCurrentStation(service.maxStation);
+        service.setCurrentStation(service.getMaxStation());
 
         int expected = 9;
         int actual = service.getCurrentStation();
@@ -28,7 +28,7 @@ public class RadioTest {
     @Test
     public void setMinStation() {
         Radio service = new Radio();
-        service.setCurrentStation(service.minStation);
+        service.setCurrentStation(service.getMinStation());
 
         int expected = 0;
         int actual = service.getCurrentStation();
@@ -111,7 +111,7 @@ public class RadioTest {
     @Test
     public void increaseMaxVolume() {
         Radio service = new Radio();
-        service.setCurrentVolume(service.maxVolume);
+        service.setCurrentVolume(service.getMaxVolume());
 
         int expected = 10;
         int actual = service.getCurrentVolume();
@@ -121,7 +121,7 @@ public class RadioTest {
     @Test
     public void increaseVolumeAboveMax() {
         Radio service = new Radio();
-        service.setCurrentVolume(service.maxVolume);
+        service.setCurrentVolume(service.getMaxVolume());
         service.increaseVolume();
 
         int expected = 10;
@@ -143,7 +143,7 @@ public class RadioTest {
     @Test
     public void reduceMinVolume() {
         Radio service = new Radio();
-        service.setCurrentVolume(service.minVolume);
+        service.setCurrentVolume(service.getMinVolume());
 
         int expected = 0;
         int actual = service.getCurrentVolume();
@@ -153,7 +153,7 @@ public class RadioTest {
     @Test
     public void reduceBelowVolume() {
         Radio service = new Radio();
-        service.setCurrentVolume(service.minVolume);
+        service.setCurrentVolume(service.getMinVolume());
         service.reduceVolume();
 
         int expected = 0;
